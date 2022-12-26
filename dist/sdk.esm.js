@@ -34,9 +34,9 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73';
+var FACTORY_ADDRESS = '0xbAbbaae53073089200E616CB109223FBC5623763';
 var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[ChainId.MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[ChainId.TESTNET] = '0xF4F472E37f83716a7C4340E0FD7716E70fba9d78', _FACTORY_ADDRESS_MAP);
-var INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5';
+var INIT_CODE_HASH = '0xf5bc68960cb562d61ec0a5b687aa37fe180e45316f178b899786b8a724a42c7a';
 var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[ChainId.MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[ChainId.TESTNET] = '0xf3a55c0ac469c7dbad54b8134edd04f7c7de82a66874c7dcabfffade2385daf1', _INIT_CODE_HASH_MAP);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
@@ -774,7 +774,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'TREE-LP', 'Amazon LPs');
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'ZEUS-LP', 'Zeus LPs');
     this.tokenAmounts = tokenAmounts;
   }
 
